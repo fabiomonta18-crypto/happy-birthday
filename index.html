@@ -5,11 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday María & Elvira</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background photo setup */
+    body {
+      background-image: url('https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      backdrop-filter: blur(3px);
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-pink-100 via-white to-indigo-100 flex items-center justify-center">
-  <div class="bg-white shadow-2xl rounded-2xl p-8 max-w-md w-full text-center">
-    <h1 class="text-3xl font-bold text-pink-600 mb-6">Happy Birthday María & Elvira 🎉</h1>
 
+<body class="flex items-center justify-center">
+  <div class="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl p-8 max-w-md w-full text-center border border-white/30">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-pink-600 mb-6">
+      🎉 Happy Birthday 
+      <span class="text-indigo-600">María</span> & 
+      <span class="text-indigo-600">Elvira</span>
+    </h1>
+
+    <!-- Form -->
     <form id="bookingForm" class="space-y-5">
       <!-- Musical Selection -->
       <div>
@@ -25,7 +43,7 @@
         </select>
       </div>
 
-      <!-- Manual Entry -->
+      <!-- Manual Musical Entry -->
       <div id="customMusicalContainer" class="hidden">
         <label for="customMusical" class="block text-gray-700 font-medium mb-2">Enter the musical name</label>
         <input type="text" id="customMusical" name="customMusical" placeholder="e.g. Les Misérables" class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-pink-400" />
@@ -44,7 +62,7 @@
     </form>
 
     <!-- Confirmation Message -->
-    <p id="confirmation" class="hidden mt-5 text-green-600 font-medium">✅ Your booking has been submitted successfully!</p>
+    <p id="confirmation" class="hidden mt-5 text-green-700 font-medium">✅ Your booking has been submitted successfully!</p>
   </div>
 
   <script>
